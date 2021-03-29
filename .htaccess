@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteEngine On 
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+
+ #RewriteCond %{HTTPS} off
+ #RewriteCond www.%{HTTP_HOST} ^(?:www\.)?(www\..+)$ [NC]
+ #RewriteRule ^ https://%1%{REQUEST_URI} [NE,L,R]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
