@@ -170,6 +170,9 @@ body {
       document.getElementById('errorname').style.color="red";
       //return false;
      }
+     else {
+      document.getElementById('errorname').style.display='none';
+     }
      if(email.length=="0"){
      error += 1;
     //alert(22222222222222);
@@ -177,11 +180,17 @@ body {
         document.getElementById('erroremail').style.color="red";
         //return false;
      }
+     else {
+      document.getElementById('erroremail').style.display='none';
+     }
      if(!email_filter.test(email)){
         error += 1;
         document.getElementById('erroremail').innerHTML="Enter Email";
         document.getElementById('erroremail').style.color="red";
       //alert('Enter a valid email address');
+      }
+      else {
+      document.getElementById('erroremail').style.display='none';
       }
       if(dob.length=="0"){
      error += 1;
@@ -190,13 +199,19 @@ body {
         document.getElementById('errordob').style.color="red";
         //return false;
      }
+     else {
+      document.getElementById('errordob').style.display='none';
+      }
       if(inputPassword.length=="0"){
      error += 1;
     //alert(22222222222222);
         document.getElementById('errorpass').innerHTML="Enter password";
         document.getElementById('errorpass').style.color="red";
         //return false;
-     } 
+     }
+     else {
+      document.getElementById('errorpass').style.display='none';
+      } 
      if(confPassword.length=="0"){
      error += 1;
     //alert(22222222222222);
@@ -204,6 +219,9 @@ body {
         document.getElementById('errorconpass').style.color="red";
         //return false;
      } 
+     else {
+      document.getElementById('errorconpass').style.display='none';
+      }
      if(inputPassword !=confPassword){
      error += 1;
     //alert(22222222222222);
@@ -211,6 +229,9 @@ body {
         document.getElementById('errorconpass').style.color="red";
         //return false;
      } 
+     else {
+      document.getElementById('errorconpass').style.display='none';
+      }
      if(error >0)
      {
      return false;
